@@ -1,4 +1,4 @@
-import { expect, mock, test } from 'claude-code/testing'
+import { expect, mock, test, type TestBody } from 'claude-code/testing'
 import type { On } from 'claude-code'
 
 const TURN = { answer: 'ok', durationMs: 1, isAborted: false, turnId: 't1' } as const
@@ -60,7 +60,7 @@ function world(on: On, tokens: number, isHeadless = false) {
   return seen
 }
 
-type Engine = Parameters<Parameters<typeof test>[1]>[0]
+type Engine = Parameters<TestBody>[0]
 type Clock = ReturnType<typeof mock.clock>
 
 // The 250 ms wait, then the compaction /compact runs, then the command's end.
