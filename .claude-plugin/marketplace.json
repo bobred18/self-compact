@@ -1,0 +1,6 @@
+{
+  "name": "bobred18",
+  "description": "Claude Code mods by Jakub Cisło",
+  "owner": { "name": "Jakub Cisło" },
+  "plugins": [{ "name": "self-compact", "source": "./" }]
+}
